@@ -1,0 +1,35 @@
+.row{
+    display: flex;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    animation-duration: .4s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes Shake {
+    12% {
+        margin-right: 20px;
+    }
+    25% {
+        margin-right: 0px;
+    }
+    37% {
+        margin-left: 20px;
+    }
+    50% {
+        margin-left: 0px;
+    }
+    62% {
+        margin-right: 20px;
+    }
+    75% {
+        margin-right: 0px;
+    }
+    87% {
+        margin-left: 20px;
+    }
+    100% {
+        margin-left: 0px;
+    }
+}

@@ -1,0 +1,12 @@
+.home-page{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-items: flex-end;
+    gap: 10px
+}
+
+.home-page button{
+    align-self: flex-start;
+}
