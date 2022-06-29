@@ -95,6 +95,7 @@ export default function Game() {
             }
 
             socket.send(JSON.stringify({
+                type: 'update_game',
                 from_id: playerID,
                 opponent_attempts: attemptsRef.current,
                 opponent_colors: colorsRef.current
