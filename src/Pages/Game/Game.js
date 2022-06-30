@@ -60,10 +60,23 @@ export default function Game() {
             socket.onmessage = (e) => {
                 const data = JSON.parse(e.data);
     
-                if (data.from_id === playerID) return
+                if(data.type === 'update_game'){
+                    if (data.from_id === playerID) return
     
-                setOpponentAttemps(data.opponent_attempts);
-                setOpponentColors(data.opponent_colors);
+                    setOpponentAttemps(data.opponent_attempts);
+                    setOpponentColors(data.opponent_colors);
+                }   
+
+                if(data.type === 'get_game_data') {
+                    
+
+                    socket.send(JSON.stringify({
+                        type: 'give_game_data',
+                        from_id: playerID,
+                        opponent_attempts: attemptsRef.current,
+                        opponent_colors: colorsRef.current
+                    }))
+                }
             }
         }        
     }, [])
