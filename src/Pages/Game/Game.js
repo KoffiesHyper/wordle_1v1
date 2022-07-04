@@ -177,7 +177,7 @@ export default function Game() {
 
     const initializeSocket = async () => {
         if (!socket) {
-            let url = `ws://127.0.0.1:8000/ws/socket-server/${window.location.href.split('/')[4]}`;
+            let url = `ws://wordle-1v1-backend.herokuapp.com/ws/socket-server/${window.location.href.split('/')[4]}`;
             socket = new WebSocket(url);
 
             socket.onmessage = (e) => {
@@ -253,7 +253,7 @@ export default function Game() {
 
     const getPlayerNames = async () => {
         if (opponent_tagRef.current !== 'Waiting for player...') { return; }
-        const response = await axios(`http://127.0.0.1:8000/wordle/get-player-tags/${matchID}`);
+        const response = await axios(`https://wordle-1v1-backend.herokuapp.com/wordle/get-player-tags/${matchID}`);
 
         if (localStorage.getItem('tag') == response.data[0].tag) {
             setTag(response.data[0].tag);
@@ -348,7 +348,7 @@ export default function Game() {
     }
 
     const getWordToGuess = async () => {
-        const response = await axios.post(`http://127.0.0.1:8000/wordle/get-match/${matchID}`)
+        const response = await axios.post(`https://wordle-1v1-backend.herokuapp.com/get-match/${matchID}`)
 
         const splitted = response.data.to_guess.split('.')
         setWordRef((splitted[0] === localStorage.getItem('opponent_to_guess') ? splitted[1] : splitted[0]))

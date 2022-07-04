@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { useNavigate } from 'react-router-dom'
 import './Home.css'
 
-let url = 'http://127.0.0.1:8000/wordle/join';
+let url = 'https://wordle-1v1-backend.herokuapp.com/wordle/join';
 const dictionary_API_URL = 'https://api.dictionaryapi.dev/api/v2/entries/en';
 
 const titleLetters = 'WORDLE 1v1'.split('')
