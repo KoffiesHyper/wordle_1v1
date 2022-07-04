@@ -2,5 +2,37 @@
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
-    margin-top: 100px;
+    margin-bottom: 50px;
+    animation-duration: 2s;
+    animation-direction: forwards;
+    animation-iteration-count: infinite;
+}
+
+.wordle-board h3{
+    font-family: custom3;
+    font-size: 20px;
+}
+
+@keyframes shiftLeft {
+    0% {
+        margin-right: 0px;
+        opacity: 1;
+    }
+
+    100% {
+        margin-right: 100px;
+        opacity: 0;
+    }
+}
+
+@keyframes shiftRight {
+    0% {
+        margin-left: 0px;
+        opacity: 1;
+    }
+
+    100% {
+        margin-left: 100px;
+        opacity: 0;
+    }
 }

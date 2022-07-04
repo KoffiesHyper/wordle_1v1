@@ -3,10 +3,87 @@
     height: 100vh;
     display: grid;
     justify-items: center;
-    align-items: flex-end;
+    align-items: center;
+    grid-template-rows: 1fr 1.5fr;
     gap: 10px
 }
 
 .home-page button{
-    align-self: flex-start;
+    background-color: rgb(103, 185, 103);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    padding-inline: 40px;
+    cursor: pointer;
+    font-family: custom3;
+    font-size: 16px;
+    box-shadow: 0 2px 4px 0 rgba(125, 247, 125, 0.2), 0 3px 10px 0 rgba(125, 247, 125, 0.2);
+    margin-top: 20px;
 }
+
+.home-page .title{
+    display: flex;
+
+}
+
+.home-page .block{
+    color: white;
+    font-size: 22px;
+    font-weight: lighter;
+    font-family: custom3;
+    border: 1px solid white;
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    margin: 3px;
+}
+
+.home-page input{
+    height: 20px;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid white;
+    padding: 10px;
+    font-family: custom1;
+    font-size: 16px;
+    background-color: rgb(46, 46, 46);
+    color: white;
+    box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.2), 0 3px 10px 0 rgba(255, 255, 255, 0.2);
+}
+
+.form{
+    align-self: start;
+    display: grid;
+    background-color: transparent;
+    padding: 20px;
+    gap: 10px;
+    width: 300px;
+}
+
+.home-page .heading{
+    position: relative;
+    background-color: rgb(46, 46, 46);
+    width: auto;
+    justify-self: flex-start;
+    top: 18px;
+    left: 5px;
+    padding-inline: 5px;
+    font-size: 12px;
+    color: white;
+    font-family: custom2;
+}
+
+@keyframes title{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+

@@ -1,0 +1,109 @@
+.game{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 8fr 2fr;
+}
+
+.boards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    animation-duration: .75s;
+    animation-fill-mode: forwards;
+}
+
+.boards p{
+    font-weight: lighter;
+    font-family: custom1;
+    font-size: 20px;
+    color: white;
+}
+
+.vertical-line{
+    width: 0px;
+    height: 60%;
+    background-color: transparent;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-left: 2px dashed white;
+}
+
+.keyboard{
+    width: 750px;
+    justify-self: center;
+    display: grid;
+    justify-items: center;
+}
+
+.keyboard button{
+    width: 40px;
+    height: 50px;
+    margin-left: 2px;
+    margin-right: 2px;
+    text-align: center;
+    border: none;
+    background-color: rgb(158, 158, 158);
+    color: white;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+@keyframes shift {
+    0% {
+        gap: 0px;
+        opacity: 1;
+    }
+
+    100% {
+        gap: 100px;
+        opacity: 0;
+    }
+}
+
+.game-over-screen{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    justify-self: center;
+}
+
+.game-over-screen button{
+    align-self: flex-start;
+    background-color: rgb(103, 185, 103);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    width: 440px;
+    padding: 20px;
+    cursor: pointer;
+    font-family: custom3;
+    font-size: 16px;
+    box-shadow: 0 2px 4px 0 rgba(125, 247, 125, 0.2), 0 3px 10px 0 rgba(125, 247, 125, 0.2);
+    margin-top: 20px;
+}
+
+.game-over-box{
+    width: 400px;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+    align-self: flex-end;
+}
+
+.game-over-box h1{
+    font-family: custom2;
+    margin: 0px;
+}
+
+.game-over-box p{
+    font-family: custom1;
+}
